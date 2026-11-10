@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nossa Casa | Portas e Janelas</title>
+<meta name="description" content="Nossa Casa Esquadrias: portas e esquadrias para a sua casa. Veja os modelos e peça seu orçamento pelo WhatsApp.">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b2420;--acc:#e8731a;--acc-d:#ff842d;--peach:#fdf0e4;--cream:#fff6ec;--sand:#fbe3cc;--line:#f0d9c3;--bg:#fffaf5;--muted:#6b5a4e;
+--serif:'Bricolage Grotesque',Georgia,sans-serif;--sans:'Figtree',system-ui,sans-serif;--sh:0 14px 34px -16px rgba(120,60,10,.3)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.08;letter-spacing:-.025em}
+h2{font-size:clamp(1.9rem,4vw,2.7rem)}
+p{max-width:62ch}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-d);margin-bottom:.8rem}
+.eyebrow::before{content:"";display:inline-block;width:28px;height:2px;background:var(--acc);vertical-align:middle;margin-right:.6rem}
+.i{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.i.f{fill:currentColor;stroke:none}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,250,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:76px}
+.logo{text-decoration:none;display:flex;align-items:center}
+.logo img{height:54px;display:block}
+.word{font-family:var(--serif);font-weight:700;font-size:1.4rem;line-height:1}
+.word small{display:block;font-family:var(--sans);font-weight:600;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--acc-d);margin-top:.35rem}
+nav ul{display:flex;gap:1.8rem;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;padding:.4rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--acc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--acc-d);color:#fff;text-decoration:none;font:inherit;font-weight:600;padding:.9rem 1.6rem;border-radius:12px;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btn:hover{background:#f86b06;transform:translateY(-1px);box-shadow:0 8px 18px -8px rgb(255, 127, 35)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff;box-shadow:none}
+.btn.sm{padding:.65rem 1rem;font-size:.92rem;width:100%}
+.menu-btn{display:none;background:none;border:1.5px solid var(--ink);border-radius:10px;padding:.45rem .8rem;font:inherit;font-weight:600;cursor:pointer}
+
+/* hero */
+.hero{background:radial-gradient(900px 420px at 85% 8%,var(--sand),transparent 70%),linear-gradient(180deg,var(--peach),var(--bg));overflow:hidden;padding:clamp(3rem,7vw,5rem) 0 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin-bottom:1.3rem}
+.hero h1 em{font-style:normal;color:var(--acc-d)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);margin-bottom:2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.pts{list-style:none;padding:0;display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.2rem;font-size:.95rem;font-weight:500}
+.pts li{display:flex;align-items:center;gap:.5rem}
+.pts li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.mos{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:1fr 1fr;gap:.9rem;height:clamp(380px,46vw,500px)}
+.tile{position:relative;overflow:hidden;border-radius:20px;background:var(--sand);display:flex;align-items:flex-end;text-decoration:none;color:#fff;box-shadow:var(--sh)}
+.tile.big{grid-row:span 2}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile:hover img{transform:scale(1.06)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(30,15,5,.72))}
+.tile.nofoto::after{background:none}
+.tile span{position:relative;z-index:1;padding:1.1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;width:100%;font-family:var(--serif);font-weight:700;font-size:1.25rem}
+.tile span .i{width:1.3rem;height:1.3rem;transition:transform .25s}
+.tile:hover span .i{transform:translateX(4px)}
+.tile.nofoto{color:var(--acc-d)}
+.tile.loc{background:var(--acc-d);color:#fff}
+.tile.loc span{flex-direction:column;align-items:flex-start;justify-content:flex-end;height:100%;gap:.3rem}
+.tile.loc small{font-family:var(--sans);font-weight:500;font-size:.85rem;opacity:.85}
+.peak{display:block;width:100%;height:auto;margin-top:3rem;color:var(--acc);opacity:.28}
+
+/* galleries */
+.alt{background:var(--peach)}
+.head{margin-bottom:2.2rem}
+.head p{color:var(--muted);margin-top:.6rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.item:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.ph{aspect-ratio:4/5;background:var(--sand);display:grid;place-items:center;position:relative;border:0;padding:0;width:100%;cursor:zoom-in;overflow:hidden}
+.item.b .ph{background:var(--cream)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.ph:hover img{transform:scale(1.05)}
+.ph.empty{cursor:default;color:var(--muted);font-size:.85rem;font-weight:500;text-align:center;padding:1rem}
+.ph.empty .i{width:38px;height:38px;display:block;margin:0 auto .5rem;opacity:.5}
+.tag{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--acc-d);font-weight:700;font-size:.75rem;letter-spacing:.04em;padding:.25rem .65rem;border-radius:999px;z-index:1}
+.cap{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.cap h3{font-size:1.05rem;line-height:1.25;letter-spacing:-.01em;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* location */
+.loc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:center}
+.addr{display:flex;gap:1rem;align-items:flex-start;font-style:normal;margin:1.6rem 0;padding:1.3rem;background:#fff;border:1px solid var(--line);border-radius:16px;color:var(--muted)}
+.addr .i{color:var(--acc-d);width:1.6rem;height:1.6rem;margin-top:.15rem}
+.addr b{display:block;color:var(--ink);font-family:var(--serif);font-size:1.2rem;margin-bottom:.2rem}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+iframe{width:100%;min-height:380px;height:100%;border:0;border-radius:20px;background:var(--sand);box-shadow:var(--sh)}
+
+  
+/* contact */
+.contact{background:var(--peach)}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}
+.c-left p{color:var(--muted);margin:.8rem 0 1.8rem}
+.hrs{list-style:none;padding:0;margin:0 0 2rem;max-width:340px}
+.hrs li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.hrs li span:first-child{color:var(--muted)}.hrs li span:last-child{font-weight:600}
+.hrs .off span:last-child{color:var(--acc-d)}
+.rows{border-top:1px solid var(--ink)}
+.row{display:flex;align-items:center;gap:1.1rem;padding:1.15rem .2rem;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .25s,background .25s}
+.row:hover{padding-left:.9rem;background:rgba(255,255,255,.6)}
+.row .i{width:1.5rem;height:1.5rem;color:var(--acc-d)}
+.row .t{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.row .t small{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.row .t span{font-family:var(--serif);font-size:1.2rem;font-weight:600;overflow-wrap:anywhere}
+.row .go{margin-left:auto;color:var(--acc);transition:transform .25s}
+.row:hover .go{transform:translateX(5px)}
+
+/* footer */
+footer{background:var(--ink);color:#cdbfb3;padding:3.5rem 0 1.5rem;font-size:.93rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .word{color:#fff;margin-bottom:1rem}footer .word small{color:#ffb77a}
+footer p{max-width:34ch}
+footer h4{color:#fff;font-family:var(--serif);font-size:1rem;letter-spacing:.02em;margin-bottom:1rem}
+footer ul{list-style:none;padding:0}footer li{padding:.22rem 0}
+footer a{text-decoration:none;transition:color .2s}footer a:hover{color:#ffb77a}
+.soc{display:flex;gap:.6rem;margin-top:1.3rem}
+.soc a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;color:#fff}
+.soc a:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+.copy{padding-top:1.3rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:#a89a8e}
+
+dialog{border:0;background:transparent;padding:0;max-width:92vw;max-height:92vh;margin:auto}
+dialog::backdrop{background:rgba(25,15,8,.88)}
+dialog img{max-width:92vw;max-height:82vh;border-radius:14px;display:block;margin:0 auto}
+dialog form{text-align:center;margin-top:.8rem}
+
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){
+.hero-grid,.loc-grid,.c-grid,.fgrid{grid-template-columns:1fr}
+.mos{height:360px}
+.c-grid{gap:2.5rem}.fgrid{gap:2rem}
+.grid{grid-template-columns:repeat(2,1fr);gap:.9rem}
+.menu-btn{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:.5rem 4%}nav a{display:block;padding:.9rem 0}
+.hdr-cta{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#inicio" id="logo" aria-label="Nossa Casa Esquadrias - início"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Home</a></li>
+        <li><a href="#portas">Portas</a></li>
+        <li><a href="#esquadrias">Esquadrias</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn hdr-cta" id="wa-head" href="#"><svg class="i f" data-i="wa" viewBox="0 0 24 24"></svg>Peça seu orçamento</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Portas e esquadrias</span>
+        <h1>Portas e esquadrias que <em>valorizam</em> a sua casa.</h1>
+        <p class="lead">Veja nossos modelos e peça seu orçamento direto pelo WhatsApp, de forma rápida e sem complicação.</p>
+        <div class="cta">
+          <a class="btn" id="wa-hero" href="#"><svg class="i f" data-i="wa" viewBox="0 0 24 24"></svg>Peça pelo WhatsApp</a>
+          <a class="btn ghost" href="#portas">Ver modelos</a>
+        </div>
+        <ul class="pts"><li>Orçamento pelo WhatsApp</li><li>Atendimento personalizado</li><li>Visite nossa loja</li></ul>
+      </div>
+      <div class="mos rv" id="hero-art"></div>
+    </div>
+    <svg class="peak" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 C90 80 150 58 220 58 C290 58 310 74 380 74 C470 74 520 10 600 10 C680 10 700 52 770 52 C830 52 850 34 910 34 C1000 34 1100 80 1200 90 Z" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<section id="portas">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Catálogo</span><h2>Portas</h2><p>Toque na foto para ampliar e use o botão para pedir orçamento do modelo.</p></div>
+    <div class="grid" id="grid-portas"></div>
+  </div>
+</section>
+
+<section class="alt" id="esquadrias">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Catálogo</span><h2>Esquadrias</h2><p>Toque na foto para ampliar e use o botão para pedir orçamento do modelo.</p></div>
+    <div class="grid" id="grid-esquadrias"></div>
+  </div>
+</section>
+
+<section id="localizacao">
+  <div class="wrap loc-grid">
+    <div class="rv">
+      <span class="eyebrow">Visite a loja</span>
+      <h2>Onde estamos</h2>
+      <address class="addr"><svg class="i" data-i="pin" viewBox="0 0 24 24"></svg><div><b>Galeria Vagalume</b>R. Aldmar Gomes Duarte Coelho, 219 - Sala 2<br>Parque Imperial, Paraty - RJ<br>CEP 23970-000</div></address>
+      <div class="btns">
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Galeria+Vagalume+R.+Aldmar+Gomes+Duarte+Coelho+219+Parque+Imperial+Paraty+RJ">Como chegar</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/vydfZspwwzo4xDPZ6">Abrir no Google Maps</a>
+      </div>
+    </div>
+    <iframe title="Mapa da loja Nossa Casa - Portas - Janelas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4320.649843191478!2d-44.72201748831137!3d-23.221796049119213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9d6d73819a42af%3A0x9e739597b7e701bf!2sNossa%20Casa%20-%20Portas%20-%20Janelas!5e1!3m2!1spt-BR!2sbr!4v1794012811529!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap c-grid">
+    <div class="c-left rv">
+      <span class="eyebrow">Contato</span>
+      <h2>Fale com a Nossa Casa</h2>
+      <p>Escolha o canal de sua preferência e peça seu orçamento sem compromisso.</p>
+      <ul class="hrs">
+        <li><span>Segunda a sexta</span><span>08h – 18h</span></li>
+        <li><span>Sábado</span><span>08h – 13h</span></li>
+        <li class="off"><span>Domingo e feriados</span><span>Fechado</span></li>
+      </ul>
+      <a class="btn" id="wa-contato" href="#"><svg class="i f" data-i="wa" viewBox="0 0 24 24"></svg>Pedir orçamento agora</a>
+    </div>
+    <div class="rows rv" id="rows"></div>
+  </div>
+</section>
+</main>
+
+<footer style="border-top: 1px solid rgba(255,255,255,.08); padding: 36px 0; color: #8e9bb5; font-size: .87rem; font-family: Inter, system-ui, sans-serif; box-sizing: border-box;">
+  <style>
+    .rs-ft * { box-sizing: border-box; }
+    .rs-ft .rs-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .rs-ft .rs-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; width: 100%; }
+    .rs-ft .rs-copy { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .rs-ft .rs-dev { display: inline-flex; align-items: center; gap: 8px; }
+    .rs-ft .rs-dev img { height: 30px !important; width: auto !important; display: inline-block !important; vertical-align: middle; }
+    .rs-ft a { color: inherit; text-decoration: none; }
+  </style>
+  <div class="rs-ft">
+    <div class="rs-wrap">
+      <div class="rs-bottom">
+        <div class="rs-copy">
+          <span>© 2017 -<span id="rs-year">2026</span> Nossa Casa - Todos os direitos reservados.</span>
+          <span>•</span>
+          <div class="rs-dev">
+            <span>Desenvolvido por</span>
+            <a href="https://routersync.com.br" target="_blank" rel="noopener">
+              <img src="images/logo-routersync.png" alt="Routersync Tecnologia">
+            </a>
+          </div>
+        </div>
+        <span>Rua Aldmar Gomes Duarte Coelho, 219 - Sala 2 · Paraty - RJ</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('rs-year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+
+<dialog id="zoom"><img id="zoom-img" alt=""><form method="dialog"><button class="btn sm" style="width:auto">Fechar</button></form></dialog>
+
+<script>
+/* =====================================================================
+   COMO EDITAR (só mexa nesta parte)
+   1) LOGO: cole o link da imagem do logo em LOGO_URL.
+   2) FOTOS: cole o link de cada foto no campo  img  de cada item.
+      Pode trocar o nome ("Porta 01") pelo nome real do modelo.
+      Para ter mais fotos, copie uma linha { nome:"...", img:"" }.
+   3) Campo vazio ("") mostra um espaço reservado cinza.
+   4) WHATSAPP: o texto depois do " - " vira o nome do contato (Loja, Jairo...).
+   ===================================================================== */
+const LOGO_URL = "images/nossacasa_logo.png";   // ex.: "https://seusite.com.br/logo.png"
+
+const PORTAS = [
+  { nome:"Código:001 - Porta Pivotante De Madeira Maciça BBB Angelim ", img:"images/porta_pivotante.jpeg" },
+  { nome:"Código:002 - Porta Americana Externa 210x82 Cm Maciça Modelo 7 Almofadas Eucalipto", img:"images/porta_americana_externa_210x82_cm_macica_modelo_7_almofada.jpg" },
+  { nome:"Código:003 - ", img:"images/" },
+  { nome:"Código:004 - Porta De Madeira Maciça Americana", img:"images/porta_de_madeira_macica_americana.png" },
+  { nome:"Porta 05", img:"" },
+  { nome:"Porta 06", img:"" },
+  { nome:"Porta 07", img:"" },
+  { nome:"Porta 08", img:"" },
+  { nome:"Porta 09", img:"" },
+  { nome:"Porta 10", img:"" },
+  { nome:"Porta 11", img:"" },
+  { nome:"Porta 12", img:"" }
+];
+
+const ESQUADRIAS = [
+  { nome:"Código:013 - Porta Basculante Alumínio Brilhante Vidro Jateado Linha Premium (AF)", img:"images/porta_basculante_aluminio_brilhante_vidro_jateado_linha_premium_af.png" },
+  { nome:"Código:014 - Porta Social com Postigo em Alumínio Brilhante | Vidro Jateado ", img:"images/porta_social_com_postigo_em_aluminio_brilhante_vidro_jateado.jpg" },
+  { nome:"Esquadria 03", img:"" },
+  { nome:"Esquadria 04", img:"" },
+  { nome:"Esquadria 05", img:"" },
+  { nome:"Esquadria 06", img:"" },
+  { nome:"Esquadria 07", img:"" },
+  { nome:"Esquadria 08", img:"" },
+  { nome:"Esquadria 09", img:"" },
+  { nome:"Esquadria 10", img:"" },
+  { nome:"Esquadria 11", img:"" },
+  { nome:"Esquadria 12", img:"" }
+];
+
+const WHATS = [ {num:"5524999764840", txt:"(24) 99976-4840 - Loja"}, {num:"5512997540015", txt:"(12) 99754-0015 - Jairo"} ];
+/* ===================== fim da área de edição ===================== */
+
+const $=(s)=>document.querySelector(s);
+const wa=(t)=>"https://wa.me/"+WHATS[0].num+(t?"?text="+encodeURIComponent(t):"");
+const split=(w)=>{const [n,...r]=w.txt.split(" - ");return {num:n.trim(),nome:r.join(" - ").trim()}};
+
+// ícones
+const IC={
+ wa:'<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.13.24-3.73-.78-3.11-1.22-5.1-4.38-5.25-4.59-.15-.2-1.26-1.68-1.26-3.2s.8-2.27 1.08-2.58c.28-.31.61-.39.82-.39.2 0 .41 0 .59.01.19.01.44-.07.69.53.24.6.83 2.05.9 2.2.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.73-.85.93-1.15.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.29.15.49.22.56.35.07.13.07.74-.17 1.42z"/>',
+ fb:'<path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/>',
+ ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+ pin:'<path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
+ img:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/>',
+ go:'<path d="M5 12h14M13 6l6 6-6 6"/>'
+};
+const svg=(k,c="")=>`<svg class="i ${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[k]}</svg>`;
+document.querySelectorAll("svg[data-i]").forEach(s=>s.innerHTML=IC[s.dataset.i]);
+
+// mosaico da primeira tela (usa as fotos cadastradas)
+(function(){
+  const f=l=>l.filter(x=>x.img).map(x=>x.img);
+  const pf=f(PORTAS), ef=f(ESQUADRIAS);
+  const tile=(cls,href,img,label)=>`<a class="tile ${cls} ${img?"":"nofoto"}" href="${href}">${img?`<img src="${img}" alt="" loading="eager">`:""}<span>${label}${svg("go")}</span></a>`;
+  $("#hero-art").innerHTML=
+    tile("big","#portas",pf[0],"Portas")+
+    tile("","#esquadrias",ef[0]||pf[1],"Esquadrias")+
+    `<a class="tile loc" href="#localizacao"><span>${svg("pin")}Onde estamos<small>Visite a loja em Paraty</small></span></a>`;
+})();
+
+// logo
+const logo=$("#logo");
+const word=()=>'<span class="word">Nossa Casa<small>Esquadrias</small></span>';
+if(LOGO_URL){const i=new Image();i.src=LOGO_URL;i.alt="Nossa Casa Esquadrias";i.onerror=()=>{logo.innerHTML=word()};logo.appendChild(i)}else logo.innerHTML=word();
+
+// galerias
+function render(list,el,cls){
+  $(el).innerHTML=list.map((p,k)=>{
+    const m=p.nome.match(/^C[oó]digo\s*:?\s*(\S+)\s*-\s*(.+)$/i);
+    const tag=m?"Cód. "+m[1]:String(k+1).padStart(2,"0"), titulo=(m?m[2]:p.nome).trim();
+    const foto=p.img?`<button class="ph" data-k="${k}" aria-label="Ampliar ${titulo}"><span class="tag">${tag}</span><img src="${p.img}" alt="${titulo}" loading="lazy"></button>`
+      :`<div class="ph empty"><span class="tag">${tag}</span><div>${svg("img")}Foto ${titulo}<br>(adicione o link)</div></div>`;
+    return `<article class="item rv ${cls}">${foto}<div class="cap"><h3>${titulo}</h3><a class="btn sm ghost" target="_blank" rel="noopener" href="${wa("Olá! Tenho interesse na "+p.nome.trim()+". Podem me passar um orçamento?")}">${svg("wa","f")}Pedir orçamento</a></div></article>`;
+  }).join("");
+  $(el).onclick=(e)=>{const b=e.target.closest(".ph[data-k]");if(!b)return;const p=list[b.dataset.k];$("#zoom-img").src=p.img;$("#zoom-img").alt=p.nome;$("#zoom").showModal()};
+}
+render(PORTAS,"#grid-portas","a");
+render(ESQUADRIAS,"#grid-esquadrias","b");
+$("#zoom").addEventListener("click",e=>{if(e.target.id==="zoom")e.target.close()});
+
+// contatos (linhas minimalistas)
+const row=(ic,cls,lab,val,href,ext)=>`<a class="row" href="${href}"${ext?' target="_blank" rel="noopener"':""}>${svg(ic,cls)}<span class="t"><small>${lab}</small><span>${val}</span></span>${svg("go","go")}</a>`;
+$("#rows").innerHTML=
+  WHATS.map(w=>{const s=split(w);return row("wa","f","WhatsApp"+(s.nome?" · "+s.nome:""),s.num,"https://wa.me/"+w.num,1)}).join("")+
+  row("mail","","E-mail","nossacasaesquadrias@gmail.com","mailto:nossacasaesquadrias@gmail.com")+
+  row("ig","","Instagram","@nossacasaparatyrj","https://www.instagram.com/nossacasaparatyrj",1)+
+  row("fb","f","Facebook","@nossacasaparatyrj","https://www.facebook.com/nossacasaparatyrj",1);
+$("#f-contact").innerHTML=
+  WHATS.map(w=>{const s=split(w);return `<li><a target="_blank" rel="noopener" href="https://wa.me/${w.num}">${s.num}${s.nome?" · "+s.nome:""}</a></li>`}).join("")+
+  '<li><a href="mailto:nossacasaesquadrias@gmail.com">nossacasaesquadrias@gmail.com</a></li>';
+
+// whatsapp
+["#wa-head","#wa-hero","#wa-contato"].forEach(s=>{const el=$(s);if(!el)return;el.href=wa("Olá! Gostaria de pedir um orçamento.");el.target="_blank";el.rel="noopener"});
+document.querySelectorAll("a[data-wa]").forEach(a=>{a.href="https://wa.me/"+WHATS[a.dataset.wa].num;a.target="_blank";a.rel="noopener"});
+$("#ano").textContent=new Date().getFullYear();
+
+// aparecer ao rolar
+const els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});els.forEach(e=>io.observe(e))}else els.forEach(e=>e.classList.add("in"));
+
+// menu mobile
+const b=$(".menu-btn"),n=$("#menu");
+b.addEventListener("click",()=>{const o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});
+n.addEventListener("click",e=>{if(e.target.tagName==="A"){n.classList.remove("open");b.setAttribute("aria-expanded",false)}});
+</script>
+</body>
+</html>
