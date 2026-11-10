@@ -43,7 +43,7 @@ nav ul{display:flex;gap:1.8rem;list-style:none;padding:0}
 nav a{text-decoration:none;font-weight:500;font-size:.95rem;padding:.4rem 0;border-bottom:2px solid transparent}
 nav a:hover{border-color:var(--acc)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:var(--acc-d);color:#fff;text-decoration:none;font:inherit;font-weight:600;padding:.9rem 1.6rem;border-radius:12px;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
-.btn:hover{background:#f86b06;transform:translateY(-1px);box-shadow:0 8px 18px -8px rgb(255, 127, 35)}
+.btn:hover{background:#f86b06;transform:translateY(-1px);box-shadow:0 8px 18px -8px rgb(255,127,35)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:#fff;box-shadow:none}
 .btn.sm{padding:.65rem 1rem;font-size:.92rem;width:100%}
@@ -100,7 +100,6 @@ nav a:hover{border-color:var(--acc)}
 .btns{display:flex;gap:.7rem;flex-wrap:wrap}
 iframe{width:100%;min-height:380px;height:100%;border:0;border-radius:20px;background:var(--sand);box-shadow:var(--sh)}
 
-  
 /* contact */
 .contact{background:var(--peach)}
 .c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}
@@ -270,7 +269,6 @@ nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:.5rem 4%}nav a
   </script>
 </footer>
 
-
 <dialog id="zoom"><img id="zoom-img" alt=""><form method="dialog"><button class="btn sm" style="width:auto">Fechar</button></form></dialog>
 
 <script>
@@ -337,7 +335,8 @@ document.querySelectorAll("svg[data-i]").forEach(s=>s.innerHTML=IC[s.dataset.i])
 
 // mosaico da primeira tela (usa as fotos cadastradas)
 (function(){
-  const f=l=>l.filter(x=>x.img).map(x=>x.img);
+  const ok=x=>x.img&&!x.img.endsWith("/");
+  const f=l=>l.filter(ok).map(x=>x.img);
   const pf=f(PORTAS), ef=f(ESQUADRIAS);
   const tile=(cls,href,img,label)=>`<a class="tile ${cls} ${img?"":"nofoto"}" href="${href}">${img?`<img src="${img}" alt="" loading="eager">`:""}<span>${label}${svg("go")}</span></a>`;
   $("#hero-art").innerHTML=
@@ -355,8 +354,8 @@ if(LOGO_URL){const i=new Image();i.src=LOGO_URL;i.alt="Nossa Casa Esquadrias";i.
 function render(list,el,cls){
   $(el).innerHTML=list.map((p,k)=>{
     const m=p.nome.match(/^C[oó]digo\s*:?\s*(\S+)\s*-\s*(.+)$/i);
-    const tag=m?"Cód. "+m[1]:String(k+1).padStart(2,"0"), titulo=(m?m[2]:p.nome).trim();
-    const foto=p.img?`<button class="ph" data-k="${k}" aria-label="Ampliar ${titulo}"><span class="tag">${tag}</span><img src="${p.img}" alt="${titulo}" loading="lazy"></button>`
+    const tag=m?"Cód. "+m[1]:String(k+1).padStart(2,"0"), titulo=((m?m[2]:p.nome).trim())||("Modelo "+(k+1));
+    const foto=(p.img&&!p.img.endsWith("/"))?`<button class="ph" data-k="${k}" aria-label="Ampliar ${titulo}"><span class="tag">${tag}</span><img src="${p.img}" alt="${titulo}" loading="lazy"></button>`
       :`<div class="ph empty"><span class="tag">${tag}</span><div>${svg("img")}Foto ${titulo}<br>(adicione o link)</div></div>`;
     return `<article class="item rv ${cls}">${foto}<div class="cap"><h3>${titulo}</h3><a class="btn sm ghost" target="_blank" rel="noopener" href="${wa("Olá! Tenho interesse na "+p.nome.trim()+". Podem me passar um orçamento?")}">${svg("wa","f")}Pedir orçamento</a></div></article>`;
   }).join("");
@@ -373,14 +372,10 @@ $("#rows").innerHTML=
   row("mail","","E-mail","nossacasaesquadrias@gmail.com","mailto:nossacasaesquadrias@gmail.com")+
   row("ig","","Instagram","@nossacasaparatyrj","https://www.instagram.com/nossacasaparatyrj",1)+
   row("fb","f","Facebook","@nossacasaparatyrj","https://www.facebook.com/nossacasaparatyrj",1);
-$("#f-contact").innerHTML=
-  WHATS.map(w=>{const s=split(w);return `<li><a target="_blank" rel="noopener" href="https://wa.me/${w.num}">${s.num}${s.nome?" · "+s.nome:""}</a></li>`}).join("")+
-  '<li><a href="mailto:nossacasaesquadrias@gmail.com">nossacasaesquadrias@gmail.com</a></li>';
 
 // whatsapp
 ["#wa-head","#wa-hero","#wa-contato"].forEach(s=>{const el=$(s);if(!el)return;el.href=wa("Olá! Gostaria de pedir um orçamento.");el.target="_blank";el.rel="noopener"});
 document.querySelectorAll("a[data-wa]").forEach(a=>{a.href="https://wa.me/"+WHATS[a.dataset.wa].num;a.target="_blank";a.rel="noopener"});
-$("#ano").textContent=new Date().getFullYear();
 
 // aparecer ao rolar
 const els=document.querySelectorAll(".rv");
