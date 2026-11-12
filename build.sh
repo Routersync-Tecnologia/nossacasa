@@ -3,9 +3,9 @@
 VERSION=1
 MINOR=0
 PATCH=
-EXTRAVERSION="-rc2"
+EXTRAVERSION="-rc3"
 
-NOTES="favicon adjustments;"
+NOTES="Arrumado nomenclçaruas e posições"
 BRANCH="main"
 
 set -e
