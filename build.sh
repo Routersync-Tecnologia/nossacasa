@@ -3,9 +3,9 @@
 VERSION=1
 MINOR=0
 PATCH=
-EXTRAVERSION="-rc3"
+EXTRAVERSION="-rc4"
 
-NOTES="Arrumado nomenclçaruas e posições"
+NOTES="Feito modificações importantes: como adicionar mais fotos de portas, arrumas algumas partes que estavam escritas errado, e melhorias no layout."
 BRANCH="main"
 
 set -e
