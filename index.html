@@ -251,11 +251,11 @@ nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:.5rem 4%}nav a
     <div class="rs-wrap">
       <div class="rs-bottom">
         <div class="rs-copy">
-          <span>© 2017 - <span id="rs-year">2026</span> - Nossa Casa - Todos os direitos reservados.</span>
+          <span>© 2009–<span id="rs-year">2026</span> Nossa Casa. Todos os direitos reservados.</span>
           <span>•</span>
           <div class="rs-dev">
             <span>Desenvolvido por</span>
-            <a href="https://routersync.com.br" target="_blank" rel="noopener">
+            <a href="https://www.routersync.com.br" target="_blank" rel="noopener">
               <img src="images/logos/logo-routersync.png" alt="Routersync Tecnologia">
             </a>
           </div>
@@ -351,7 +351,7 @@ $("#rows").innerHTML=
   WHATS.map(w=>{const s=split(w);return row("wa","f","WhatsApp"+(s.nome?" · "+s.nome:""),s.num,"https://wa.me/"+w.num,1)}).join("")+
   row("mail","","E-mail","nossacasaaluminio@gmail.com","mailto:nossacasaaluminio@gmail.com")+
   row("ig","","Instagram","@nossacasaparatyrj","https://www.instagram.com/nossacasaparatyrj",1)+
-  row("fb","f","Facebook","@nossacasaparatyrj","https://www.facebook.com/nossacasaparatyrj",1);
+  row("fb","f","Facebook","@jairo.paraty","https://www.facebook.com/jairo.paraty/",1);
 
 // whatsapp
 ["#wa-head","#wa-hero","#wa-contato"].forEach(s=>{const el=$(s);if(!el)return;el.href=wa("Olá! Gostaria de pedir um orçamento.");el.target="_blank";el.rel="noopener"});

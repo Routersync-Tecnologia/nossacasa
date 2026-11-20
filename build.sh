@@ -2,10 +2,10 @@
 
 VERSION=1
 MINOR=0
-PATCH=
-EXTRAVERSION="-rc4"
+PATCH=0
+EXTRAVERSION=""
 
-NOTES="Feito modificações importantes: como adicionar mais fotos de portas, arrumas algumas partes que estavam escritas errado, e melhorias no layout."
+NOTES="Feito mudanças em nomes que estavam errados nos perfiz de rede social e alterado data de inicio da empresa, site inicial no ar."
 BRANCH="main"
 
 set -e
